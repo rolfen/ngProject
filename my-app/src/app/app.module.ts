@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { RouterModule } from '@angular/router';
+
+import { NgLandingComponent } from './ng-landing/app.component';
 import { AppComponent } from './app.component';
-import { MyCompComponent } from './my-comp/my-comp.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyCompComponent
+    NgLandingComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      {path: 'home', component: HomeComponent},
+      {path: 'ng-landing', component: NgLandingComponent},
+      { path: '', redirectTo: '/home', pathMatch: 'full' },
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
