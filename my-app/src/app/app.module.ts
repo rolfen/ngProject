@@ -6,12 +6,14 @@ import { RouterModule } from '@angular/router';
 import { NgLandingComponent } from './ng-landing/app.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgLandingComponent,
-    HomeComponent
+    HomeComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
